@@ -44,7 +44,7 @@ public partial class UserDefinedFunctions
             foreach (FileInfo fileInfo in files)
             {
                 FilePropertiesCollection.Add(new FileData(
-                    fileInfo.Name, 
+                    fileInfo.Name,
                     fileInfo.Extension,
                     fileInfo.FullName,
                     fileInfo.DirectoryName,
@@ -61,7 +61,8 @@ public partial class UserDefinedFunctions
         {
             return null;
         }
-    }    private static void FillRows(object objFileProperties, out string fileName, out string fileExtension, out string fileFullName, out string fileDirectoryName, out long fileSize, out bool fileIsReadOnly, out DateTime fileCreationTime, out DateTime fileLastAccessTime, out DateTime fileLastWriteTime)
+    }
+    private static void FillRows(object objFileProperties, out string fileName, out string fileExtension, out string fileFullName, out string fileDirectoryName, out long fileSize, out bool fileIsReadOnly, out DateTime fileCreationTime, out DateTime fileLastAccessTime, out DateTime fileLastWriteTime)
     {
         FileData fileProperties = (FileData)objFileProperties;
         fileName = fileProperties.Name;
